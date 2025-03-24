@@ -15,7 +15,7 @@ int main() {
 
     printf("carta:\n");
     scanf("%d", &carta);
-    getchar(); 
+    getchar();
 
     printf("Digite o estado: \n");
     fgets(estado, 50, stdin);
