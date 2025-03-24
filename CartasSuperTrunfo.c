@@ -1,6 +1,7 @@
 #include <stdio.h>
 
 int main() {
+    int carta;
     char estado[50];
     char codigo_carta[50];
     char nome_cidade[50];
@@ -8,43 +9,13 @@ int main() {
     float area;
     float pib;
     int pontos_turisticos;
+    float densidade_populacional;
+   float pib_per_capita;
 
-    printf("Carta 1\n");
 
-    printf("Digite o estado: \n");
-    fgets(estado, 50, stdin);
-
-    printf("Digite o codigo da carta: \n");
-    fgets(codigo_carta, 50, stdin);
-
-    printf("Digite o nome da cidade: \n");
-    fgets(nome_cidade, 50, stdin);
-
-    printf("Digite a populacao: \n");
-    scanf("%d", &populacao);
-    getchar(); // remove o caractere de newline do buffer de entrada
-
-    printf("Area: \n");
-    scanf("%f", &area);
-    getchar(); // remove o caractere de newline do buffer de entrada
-
-    printf("Pib: \n");
-    scanf("%f", &pib);
-    getchar(); // remove o caractere de newline do buffer de entrada
-
-    printf("Numero de pontos turisticos: \n");
-    scanf("%d", &pontos_turisticos);
-    getchar(); // remove o caractere de newline do buffer de entrada
-
-    printf("Nome do estado: %s\n", estado);
-    printf("Codigo da carta: %s\n", codigo_carta);
-    printf("Nome da cidade: %s\n", nome_cidade);
-    printf("Populacao: %d\n", populacao);
-    printf("Area: %f km²\n", area);
-    printf("Pib: %f bilões de reais \n", pib);
-    printf("Pontos turisticos: %d\n", pontos_turisticos);
-
-    printf("Carta 2 \n");
+    printf("carta:\n");
+    scanf("%d", &carta);
+    getchar(); 
 
     printf("Digite o estado: \n");
     fgets(estado, 50, stdin);
@@ -57,42 +28,77 @@ int main() {
 
     printf("Digite a populacao: \n");
     scanf("%d", &populacao);
-    getchar(); // remove o caractere de newline do buffer de entrada
-
+    
     printf("Area: \n");
     scanf("%f", &area);
-    getchar(); // remove o caractere de newline do buffer de entrada
-
+    
     printf("Pib: \n");
     scanf("%f", &pib);
-    getchar(); // remove o caractere de newline do buffer de entrada
-
+    
     printf("Numero de pontos turisticos: \n");
     scanf("%d", &pontos_turisticos);
-    getchar(); // remove o caractere de newline do buffer de entrada
 
-    printf("Nome do estado: %s\n", estado);
-    printf("Codigo da carta: %s\n", codigo_carta);
-    printf("Nome da cidade: %s\n", nome_cidade);
+    pib_per_capita = pib / populacao;
+    densidade_populacional = populacao / area;
+
+
+
+
+    printf("carta: %d\n", carta);
+    printf("Nome do estado: %s", estado);
+    printf("Codigo da carta: %s", codigo_carta);
+    printf("Nome da cidade: %s", nome_cidade);
     printf("Populacao: %d\n", populacao);
-    printf("Area: %f km² \n", area);
-    printf("Pib: %f bilhões de reais \n", pib);
+    printf("Area: %.2f km²\n", area);
+    printf("Pib: %.2f bilhoes de reais\n", pib);
     printf("Pontos turisticos: %d\n", pontos_turisticos);
+    printf("pib per capita: %2f reais\n",pib_per_capita);
+    printf("densidade populacional: %2f hab/km² \n", densidade_populacional);
+
+
+
+    printf("carta:\n");
+    scanf("%d", &carta);
+    getchar(); 
+
+    printf("Digite o estado: \n");
+    fgets(estado, 50, stdin);
+
+    printf("Digite o codigo da carta: \n");
+    fgets(codigo_carta, 50, stdin);
+
+    printf("Digite o nome da cidade: \n");
+    fgets(nome_cidade, 50, stdin);
+
+    printf("Digite a populacao: \n");
+    scanf("%d", &populacao);
+    
+    printf("Area: \n");
+    scanf("%f", &area);
+    
+    printf("Pib: \n");
+    scanf("%f", &pib);
+    
+    printf("Numero de pontos turisticos: \n");
+    scanf("%d", &pontos_turisticos);
+
+    pib_per_capita = pib / populacao;
+    densidade_populacional = populacao / area;
 
 
 
 
-
-
+    printf("carta: %d\n", carta);
+    printf("Nome do estado: %s", estado);
+    printf("Codigo da carta: %s", codigo_carta);
+    printf("Nome da cidade: %s", nome_cidade);
+    printf("Populacao: %d\n", populacao);
+    printf("Area: %.2f km²\n", area);
+    printf("Pib: %.2f bilhoes de reais\n", pib);
+    printf("Pontos turisticos: %d\n", pontos_turisticos);
+    printf("pib per capita: %2f reais\n",pib_per_capita);
+    printf("densidade populacional: %2f hab/km² \n", densidade_populacional);
 
     return 0;
 }
-    // Exemplos de atributos: código da cidade, nome, população, área, PIB, número de pontos turísticos.
-    
-    // Cadastro das Cartas:
-    // Sugestão: Utilize a função scanf para capturar as entradas do usuário para cada atributo.
-  // Solicite ao usuário que insira as informações de cada cidade, como o código, nome, população, área, etc.
-    
-    // Exibição dos Dados das Cartas:
-    // Sugestão: Utilize a função printf para exibir as informações das cartas cadastradas de forma clara e organizada.
-    // Exiba os valores 
+
